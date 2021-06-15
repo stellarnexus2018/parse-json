@@ -1,0 +1,41 @@
+[
+  {
+    "locked": false,
+    "isin": "XS2166227749",
+    "nominalValue": 1000.0000,
+    "issuerId": 6,
+    "currencyCode": "USD",
+    "cfi": null,
+    "releaseDate": {
+      "year": 1970,
+      "month": "JANUARY",
+      "chronology": {
+        "calendarType": "iso8601",
+        "id": "ISO"
+      },
+      "leapYear": false,
+      "dayOfWeek": "THURSDAY",
+      "dayOfYear": 1,
+      "era": "CE",
+      "monthValue": 1,
+      "dayOfMonth": 1
+    },
+    "maturityDate": {
+      "year": 2025,
+      "month": "MAY",
+      "chronology": {
+        "calendarType": "iso8601",
+        "id": "ISO"
+      },
+      "leapYear": false,
+      "dayOfWeek": "MONDAY",
+      "dayOfYear": 125,
+      "era": "CE",
+      "monthValue": 5,
+      "dayOfMonth": 5
+    },
+    "name": "HSBCBANK (XS2166227749)",
+    "releaseCount": 0,
+    "assetType": "СтруктурныеНоты"
+  }
+]

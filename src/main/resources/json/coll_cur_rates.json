@@ -1,0 +1,23 @@
+{
+  "coll_cur_rates": [
+    {
+      "locked": null,
+      "currencyCode": "USD",
+      "rateDate": {
+        "year": 2020,
+        "month": "APRIL",
+        "chronology": {
+          "calendarType": "iso8601",
+          "id": "ISO"
+        },
+        "leapYear": true,
+        "dayOfWeek": "FRIDAY",
+        "dayOfYear": 115,
+        "era": "CE",
+        "monthValue": 4,
+        "dayOfMonth": 24
+      },
+      "rate": 75.1290
+    }
+  ]
+}

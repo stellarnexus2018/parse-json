@@ -1,0 +1,70 @@
+{
+  "coll_deals": [
+    {
+      "locked": false,
+      "isin": "XS2166227749",
+      "quotationDate": {
+        "year": 2020,
+        "month": "AUGUST",
+        "chronology": {
+          "calendarType": "iso8601",
+          "id": "ISO"
+        },
+        "leapYear": true,
+        "dayOfWeek": "MONDAY",
+        "dayOfYear": 223,
+        "era": "CE",
+        "monthValue": 8,
+        "dayOfMonth": 10
+      },
+      "price": null,
+      "sellingPrice": 188.0000,
+      "counterparty": "HSBC BANK PLC",
+      "stockExchangeId": null
+    },
+    {
+      "locked": false,
+      "isin": "XS2166227749",
+      "quotationDate": {
+        "year": 2020,
+        "month": "APRIL",
+        "chronology": {
+          "calendarType": "iso8601",
+          "id": "ISO"
+        },
+        "leapYear": true,
+        "dayOfWeek": "THURSDAY",
+        "dayOfYear": 114,
+        "era": "CE",
+        "monthValue": 4,
+        "dayOfMonth": 23
+      },
+      "price": 182.0000,
+      "sellingPrice": null,
+      "counterparty": "",
+      "stockExchangeId": null
+    },
+    {
+      "locked": false,
+      "isin": "XS2166227749",
+      "quotationDate": {
+        "year": 2020,
+        "month": "APRIL",
+        "chronology": {
+          "calendarType": "iso8601",
+          "id": "ISO"
+        },
+        "leapYear": true,
+        "dayOfWeek": "THURSDAY",
+        "dayOfYear": 114,
+        "era": "CE",
+        "monthValue": 4,
+        "dayOfMonth": 23
+      },
+      "price": 182.0000,
+      "sellingPrice": 182.0000,
+      "counterparty": null,
+      "stockExchangeId": 1
+    }
+  ]
+}

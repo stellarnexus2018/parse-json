@@ -1,0 +1,57 @@
+{
+  "lst_lis": [
+    {
+      "locked": false,
+      "id": 1552,
+      "seriesId": 1552,
+      "seriesDescriptionId": 4,
+      "channel": "Премьер",
+      "urgency": 5,
+      "snsRisk": 1,
+      "guarantee": "С",
+      "guaranteeFund": 77.98000000,
+      "investmentFund": 14.52000000,
+      "icCommissionContractConclusionOption": 2.50000000,
+      "bankCommissionContractConclusionOption": 5.00000000,
+      "icCommissionAdditionalPaymentOption": 0E-8,
+      "bankCommissionAdditionalPaymentOption": 0E-8,
+      "guaranteedProfit": 1.67968870,
+      "planningProfit": 5.10000000,
+      "guaranteeRate": 100.00000000,
+      "icCommissionChangeFundOption": 3.00000000,
+      "icCommissionAttachmentOption": 5.00000000,
+      "paymentFrequency": "не предусмотрено",
+      "couponScheme": "не предусмотрено",
+      "productGroup": "ИСЖ",
+      "description": "Доходный курс плюс ставки декабрь 2019",
+      "guaranteedCouponRate": 0E-8,
+      "deathRiskPaymentErrorType": "мгновенная",
+      "accidentRate": 1.00000000,
+      "currencyCode": "RUB",
+      "seriesBeginDate": {
+        "year": 2012,
+        "month": "DECEMBER",
+        "chronology": {
+          "calendarType": "iso8601",
+          "id": "ISO"
+        },
+        "leapYear": true,
+        "dayOfWeek": "TUESDAY",
+        "dayOfYear": 353,
+        "era": "CE",
+        "monthValue": 12,
+        "dayOfMonth": 18
+      },
+      "seriesEndDate": null,
+      "icAdditionalPayment": 0.17000000,
+      "icAttachment": 0.17000000,
+      "change": 0.17000000,
+      "ifrsReservePortion": null,
+      "ifrsReserveAtStart": null,
+      "deathAnyReasonInsuranceSum": null,
+      "operatingExpenses": null,
+      "deathRiskPaymentType": null,
+      "zfactor": 0.00533956
+    }
+  ]
+}

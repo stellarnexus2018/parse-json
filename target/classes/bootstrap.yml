@@ -1,0 +1,7 @@
+#service:
+#  name: parse-json
+#  versions: 0.0.1.1
+
+#logging:
+#  level:
+#    ru.master.service: TRACE
