@@ -13,6 +13,8 @@ import java.time.LocalDate;
 @ToString
 @Accessors(chain = true)
 public class MarketIndexRateDto {
+  private Boolean locked;
+
   /**
    * Наименование (идентификатор) индекса базового актива
    */

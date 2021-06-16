@@ -11,7 +11,9 @@ import ru.master.dto.SampleDto;
 import java.io.IOException;
 import java.io.InputStream;
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class CodeLabService {
 
@@ -52,6 +54,24 @@ public class CodeLabService {
 
     SampleDto sampleDto = objectMapper.readValue(insSample, SampleDto.class);
     System.out.println(sampleDto);
+  }
+
+
+  public static void RunThree() throws IOException {
+    ObjectMapper objectMapper = new ObjectMapper();
+    objectMapper.registerModule(new JavaTimeModule());
+    objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+    objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+
+    Map<Long, String> mp = new HashMap<>();
+    mp.put(1L, "Первый элемент");
+    mp.put(2L, "Второй элемент");
+    mp.put(3L, "Третий элемент");
+    mp.put(4L, "Четвёртый элемент");
+    mp.put(5L, "Пятый элемент");
+
+    String sample = objectMapper.writeValueAsString(mp);
+    System.out.println(sample);
   }
 }
 

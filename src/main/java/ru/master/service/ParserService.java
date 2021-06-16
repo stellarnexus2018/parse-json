@@ -2,6 +2,7 @@ package ru.master.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.extern.slf4j.Slf4j;
 import ru.master.dto.*;
@@ -13,58 +14,48 @@ import java.util.Map;
 
 @Slf4j
 public class ParserService {
-  public static List<AssetsDto> getAssetDtoList(InputStream insAssetsData) throws IOException {
-    ObjectMapper objectMapper = new ObjectMapper();
+  static ObjectMapper objectMapper;
+
+  static {
+    objectMapper = new ObjectMapper();
     objectMapper.registerModule(new JavaTimeModule());
-    List<AssetsDto> lstAssets = objectMapper.readValue(insAssetsData, /*new TypeReference<List<AssetsDto>>() {}*/ List.class);
-    return lstAssets;
+    objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+    objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+  }
+
+  public static List<AssetsDto> getAssetDtoList(InputStream insAssetsData) throws IOException {
+    return objectMapper.readValue(insAssetsData, new TypeReference<List<AssetsDto>>() {});
   }
 
   public static List<CurrencyRateDto> getCurrencyRateDtoList(InputStream insCurrencyRateData) throws IOException {
-    ObjectMapper objectMapper = new ObjectMapper();
-    List<CurrencyRateDto> lstCurrencyRate = objectMapper.readValue(insCurrencyRateData, new TypeReference<List<CurrencyRateDto>>() {
-    });
-    return lstCurrencyRate;
+    return objectMapper.readValue(insCurrencyRateData, new TypeReference<List<CurrencyRateDto>>() {});
   }
 
   public static List<DealDto> getDealDtoList(InputStream insDealDtoData) throws IOException {
-    ObjectMapper objectMapper = new ObjectMapper();
-    List<DealDto> lstDealDto = objectMapper.readValue(insDealDtoData, new TypeReference<List<DealDto>>() {
-    });
-    return lstDealDto;
+    return objectMapper.readValue(insDealDtoData, new TypeReference<List<DealDto>>() {});
   }
 
   public static List<LifeInsuranceSeriesDto> getLifeInsuranceSeriesDtoList(InputStream insLifeInsuranceSeriesDtoData) throws IOException {
-    ObjectMapper objectMapper = new ObjectMapper();
-    List<LifeInsuranceSeriesDto> lstLifeInsuranceSeriesDto = objectMapper.readValue(insLifeInsuranceSeriesDtoData, new TypeReference<List<LifeInsuranceSeriesDto>>() {
-    });
-    return lstLifeInsuranceSeriesDto;
+    return objectMapper.readValue(insLifeInsuranceSeriesDtoData, new TypeReference<List<LifeInsuranceSeriesDto>>() {});
   }
 
   public static List<MarketIndexRateDto> getMarketIndexRateDtoList(InputStream insMarketIndexRateDtoData) throws IOException {
-    ObjectMapper objectMapper = new ObjectMapper();
-    List<MarketIndexRateDto> lstMarketIndexRateDto = objectMapper.readValue(insMarketIndexRateDtoData, List.class /*new TypeReference<List<MarketIndexRateDto>>() {}*/);
-    return lstMarketIndexRateDto;
+    return objectMapper.readValue(insMarketIndexRateDtoData, new TypeReference<List<MarketIndexRateDto>>() {});
   }
 
   public static List<SecurityQuoteDto> getSecurityQuoteDtoList(InputStream insSecurityQuoteDtoData) throws IOException {
-    ObjectMapper objectMapper = new ObjectMapper();
-    List<SecurityQuoteDto> lstSecurityQuoteDto = objectMapper.readValue(insSecurityQuoteDtoData, new TypeReference<List<SecurityQuoteDto>>() {
-    });
-    return lstSecurityQuoteDto;
+    return objectMapper.readValue(insSecurityQuoteDtoData, new TypeReference<List<SecurityQuoteDto>>() {});
   }
 
-  public static Map<Long, MarketNameDto> getMarketNameDtoMap(InputStream insMarketNameDtoData) throws IOException {
-    ObjectMapper objectMapper = new ObjectMapper();
-    Map<Long, MarketNameDto> mapMarketNameDto = objectMapper.readValue(insMarketNameDtoData, new TypeReference<Map<Long, MarketNameDto>>() {
-    });
-    return mapMarketNameDto;
+  public static Map<Long, String> getMarketNameDtoMap(InputStream insMarketNameDtoData) throws IOException {
+    return objectMapper.readValue(insMarketNameDtoData, new TypeReference<Map<Long, String>>() {});
   }
 
   public static Map<Long, SerieNameDto> getSerieNameDtoDtoMap(InputStream insSerieNameDtoData) throws IOException {
-    ObjectMapper objectMapper = new ObjectMapper();
-    Map<Long, SerieNameDto> mapSerieNameDto = objectMapper.readValue(insSerieNameDtoData, new TypeReference<Map<Long, SerieNameDto>>() {
-    });
-    return mapSerieNameDto;
+    return objectMapper.readValue(insSerieNameDtoData, new TypeReference<Map<Long, SerieNameDto>>() {});
+  }
+
+  public static NewSample getNewSample(InputStream insNewSample) throws IOException {
+    return objectMapper.readValue(insNewSample, new TypeReference<NewSample>() {});
   }
 }
